@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieViewController: UIViewController {
 
@@ -60,7 +61,11 @@ extension MovieViewController: UITableViewDataSource {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.reuseIdentifier, for: indexPath) as? MovieTableViewCell else { fatalError("Unexpected Table View Cell")}
       let movie = movies[indexPath.row]
       cell.titleLabel.text = movie.title
+      cell.releaseDateLabel.text = movie.releaseDate
       cell.overviewLabel.text = movie.overview
+      if let posterPath = movie.posterPath, let url = URL(string: API.BaseURLImageString + posterPath) {
+         cell.posterImageView.af_setImage(withURL: url)
+      }
       return cell
    }
 }

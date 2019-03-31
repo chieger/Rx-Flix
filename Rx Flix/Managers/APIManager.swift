@@ -19,6 +19,7 @@ struct API {
    }
    static let APIKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
    static let BaseURLString = "https://api.themoviedb.org/3/movie/"
+   static let BaseURLImageString = "https://image.tmdb.org/t/p/w500/"
 
    static var AuthenticatedBaseURL: URL {
       return URL(string: BaseURLString+Endpoints.nowPlaying+"?api_key="+APIKey)!
