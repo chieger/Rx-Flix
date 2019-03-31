@@ -10,11 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   private lazy var apiManager = {
+      return APIManager(baseURL: API.AuthenticatedBaseURL)
+   }()
+
+   // MARK: - View Life Cycle
+
    override func viewDidLoad() {
       super.viewDidLoad()
-      // Do any additional setup after loading the view, typically from a nib.
+      fetchMoviesNowPlaying()
    }
 
-
+   // MARK: - Helper Methods
+   private func fetchMoviesNowPlaying() {
+      apiManager.fetchMoviesNowPlaying { (movies, error) in
+         if let error = error {
+            print(error.localizedDescription)
+            return
+         }
+         guard let movies = movies else {return}
+         for movie in movies {
+            print(movie.title)
+         }
+      }
+   }
 }
 
