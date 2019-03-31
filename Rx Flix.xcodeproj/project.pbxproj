@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED429ECB225023A3005BC04A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429ECA225023A3005BC04A /* AppDelegate.swift */; };
-		ED429ECD225023A3005BC04A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429ECC225023A3005BC04A /* ViewController.swift */; };
+		ED429ECD225023A3005BC04A /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429ECC225023A3005BC04A /* MovieViewController.swift */; };
 		ED429ED0225023A3005BC04A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED429ECE225023A3005BC04A /* Main.storyboard */; };
 		ED429ED2225023A4005BC04A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED429ED1225023A4005BC04A /* Assets.xcassets */; };
 		ED429ED5225023A4005BC04A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED429ED3225023A4005BC04A /* LaunchScreen.storyboard */; };
@@ -16,6 +16,7 @@
 		ED429EEB225023A4005BC04A /* Rx_FlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429EEA225023A4005BC04A /* Rx_FlixUITests.swift */; };
 		ED429EF9225052C3005BC04A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429EF8225052C3005BC04A /* Movie.swift */; };
 		ED429EFB22505B33005BC04A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429EFA22505B33005BC04A /* APIManager.swift */; };
+		ED429EFD2251600B005BC04A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429EFC2251600B005BC04A /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 /* Begin PBXFileReference section */
 		ED429EC7225023A3005BC04A /* Rx Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx Flix.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED429ECA225023A3005BC04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED429ECC225023A3005BC04A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED429ECC225023A3005BC04A /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		ED429ECF225023A3005BC04A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED429ED1225023A4005BC04A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED429ED4225023A4005BC04A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		ED429EEC225023A4005BC04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED429EF8225052C3005BC04A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		ED429EFA22505B33005BC04A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		ED429EFC2251600B005BC04A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				ED429ECA225023A3005BC04A /* AppDelegate.swift */,
-				ED429ECC225023A3005BC04A /* ViewController.swift */,
+				ED429ECC225023A3005BC04A /* MovieViewController.swift */,
 				ED429ECE225023A3005BC04A /* Main.storyboard */,
+				ED429EFC2251600B005BC04A /* MovieTableViewCell.swift */,
 				ED429ED1225023A4005BC04A /* Assets.xcassets */,
 				ED429ED3225023A4005BC04A /* LaunchScreen.storyboard */,
 				ED429ED6225023A4005BC04A /* Info.plist */,
@@ -262,7 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED429ECD225023A3005BC04A /* ViewController.swift in Sources */,
+				ED429EFD2251600B005BC04A /* MovieTableViewCell.swift in Sources */,
+				ED429ECD225023A3005BC04A /* MovieViewController.swift in Sources */,
 				ED429EFB22505B33005BC04A /* APIManager.swift in Sources */,
 				ED429ECB225023A3005BC04A /* AppDelegate.swift in Sources */,
 				ED429EF9225052C3005BC04A /* Movie.swift in Sources */,
