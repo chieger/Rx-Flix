@@ -7,6 +7,13 @@
 
 import Foundation
 
+protocol MovieCellRepresentable {
+   var title: String { get }
+   var overview: String { get }
+   var releaseDate: String? { get }
+   var posterImageURL: URL? { get }
+}
+
 struct MovieViewModel {
 
    // MARK: - Properties
@@ -43,3 +50,5 @@ struct MovieViewModel {
       return url
    }
 }
+
+extension MovieViewModel: MovieCellRepresentable { }
