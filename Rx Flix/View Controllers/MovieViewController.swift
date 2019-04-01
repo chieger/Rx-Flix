@@ -68,12 +68,7 @@ extension MovieViewController: UITableViewDataSource {
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.reuseIdentifier, for: indexPath) as? MovieTableViewCell else { fatalError("Unexpected Table View Cell")}
       let movieViewModel = movieViewModels[indexPath.row]
-      cell.titleLabel.text = movieViewModel.title
-      cell.releaseDateLabel.text = movieViewModel.releaseDate
-      cell.overviewLabel.text = movieViewModel.overview
-      if let url = movieViewModel.posterImageURL {
-         cell.posterImageView.af_setImage(withURL: url)
-      }
+      cell.configure(withViewModel: movieViewModel)
       return cell
    }
 }

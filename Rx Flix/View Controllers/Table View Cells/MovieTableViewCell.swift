@@ -22,15 +22,17 @@ class MovieTableViewCell: UITableViewCell {
    @IBOutlet weak var posterImageView: UIImageView!
 
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+   override func awakeFromNib() {
+      super.awakeFromNib()
+      // Initialization code
+   }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+   func configure(withViewModel viewModel: MovieCellRepresentable) {
+      titleLabel.text = viewModel.title
+      releaseDateLabel.text = viewModel.releaseDate
+      overviewLabel.text = viewModel.overview
+      if let url = viewModel.posterImageURL {
+         posterImageView.af_setImage(withURL: url)
+      }
+   }
 }
