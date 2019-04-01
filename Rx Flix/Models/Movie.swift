@@ -19,13 +19,15 @@ struct Movie: Codable {
 
    var title: String
    var overview: String
-   var posterPath: String?
    var releaseDate: String?
+   var posterPath: String?
+   var backdropPath: String?
 
    enum CodingKeys: String, CodingKey {
       case title
       case overview
-      case posterPath = "poster_path"
       case releaseDate = "release_date"
+      case posterPath = "poster_path"
+      case backdropPath = "backdrop_path"
    }
 }
