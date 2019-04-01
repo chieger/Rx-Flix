@@ -7,9 +7,14 @@ target 'Rx Flix' do
 
   # Pods for Rx Flix
     pod 'AlamofireImage', '~> 3.5'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+
   target 'Rx FlixTests' do
     inherit! :search_paths
     # Pods for testing
+     pod 'RxTest'
+     pod 'RxBlocking'
   end
 
   target 'Rx FlixUITests' do
