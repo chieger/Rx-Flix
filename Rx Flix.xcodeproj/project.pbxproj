@@ -21,6 +21,7 @@
 		ED429EFB22505B33005BC04A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429EFA22505B33005BC04A /* APIManager.swift */; };
 		ED429EFD2251600B005BC04A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429EFC2251600B005BC04A /* MovieTableViewCell.swift */; };
 		ED429EFF22517DD9005BC04A /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429EFE22517DD9005BC04A /* MovieDetailViewController.swift */; };
+		ED429F0A22518407005BC04A /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED429F0922518407005BC04A /* MovieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		ED429EFA22505B33005BC04A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		ED429EFC2251600B005BC04A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		ED429EFE22517DD9005BC04A /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		ED429F0922518407005BC04A /* MovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		FAC65DD4C9CA923864C5EA08 /* Pods-Rx Flix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx Flix.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx Flix/Pods-Rx Flix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +199,7 @@
 		ED429F02225181D1005BC04A /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				ED429F0922518407005BC04A /* MovieViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				ED429EFB22505B33005BC04A /* APIManager.swift in Sources */,
 				ED429ECB225023A3005BC04A /* AppDelegate.swift in Sources */,
 				ED429EFF22517DD9005BC04A /* MovieDetailViewController.swift in Sources */,
+				ED429F0A22518407005BC04A /* MovieViewModel.swift in Sources */,
 				ED429EF9225052C3005BC04A /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
