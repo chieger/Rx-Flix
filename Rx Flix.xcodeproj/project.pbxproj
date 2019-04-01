@@ -152,6 +152,7 @@
 				ED429F062251825F005BC04A /* Models */,
 				ED429F0722518285005BC04A /* Resources */,
 				ED429F08225182AA005BC04A /* Supporting Files */,
+				ED429ED6225023A4005BC04A /* Info.plist */,
 			);
 			path = "Rx Flix";
 			sourceTree = "<group>";
