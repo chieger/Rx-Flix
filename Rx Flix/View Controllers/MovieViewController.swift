@@ -15,7 +15,11 @@ class MovieViewController: UIViewController {
 
    @IBOutlet weak var movieTableView: UITableView!
 
-   var movies = [Movie]()
+   var movieViewModels = [MovieViewModel]() {
+      didSet {
+         updateView()
+      }
+   }
 
    private lazy var apiManager = {
       return APIManager(baseURL: API.AuthenticatedBaseURL)
@@ -35,6 +39,10 @@ class MovieViewController: UIViewController {
       movieTableView.rowHeight = 200
    }
 
+   private func updateView() {
+      movieTableView.reloadData()
+   }
+
    // MARK: - Helper Methods
    private func fetchMoviesNowPlaying() {
       apiManager.fetchMoviesNowPlaying { (movies, error) in
@@ -42,9 +50,10 @@ class MovieViewController: UIViewController {
             print(error.localizedDescription)
             return
          } else if let movies = movies {
-            print("Movies fetched 👍")
-            self.movies = movies
-            self.movieTableView.reloadData()
+            // Create view models from model
+            self.movieViewModels = movies.map({ (movie) -> MovieViewModel in
+               return MovieViewModel(movie: movie)
+            })
          }
       }
    }
@@ -53,17 +62,16 @@ class MovieViewController: UIViewController {
 extension MovieViewController: UITableViewDataSource {
 
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      print("number of rows called with count \(movies.count)")
-      return movies.count
+      return movieViewModels.count
    }
 
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.reuseIdentifier, for: indexPath) as? MovieTableViewCell else { fatalError("Unexpected Table View Cell")}
-      let movie = movies[indexPath.row]
-      cell.titleLabel.text = movie.title
-      cell.releaseDateLabel.text = movie.releaseDate
-      cell.overviewLabel.text = movie.overview
-      if let posterPath = movie.posterPath, let url = URL(string: API.BaseURLImageString + posterPath) {
+      let movieViewModel = movieViewModels[indexPath.row]
+      cell.titleLabel.text = movieViewModel.title
+      cell.releaseDateLabel.text = movieViewModel.releaseDate
+      cell.overviewLabel.text = movieViewModel.overview
+      if let url = movieViewModel.posterImageURL {
          cell.posterImageView.af_setImage(withURL: url)
       }
       return cell
